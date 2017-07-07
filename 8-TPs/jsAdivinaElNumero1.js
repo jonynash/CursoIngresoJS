@@ -15,7 +15,25 @@ function comenzar()
 	//Genero el número RANDOM entre 1 y 100
 	 
 		//alert(numeroSecreto );
+
+
+var numero
+numeroSecreto = Math.floor((Math.random() * 100) + 1);
+numero = document.getElementById('numero').value;
+
+console.log(numeroSecreto);
+
+if(numeroSecreto == "numero")
+{
+	alert("Usted es un ganador");
+}
+else
+{
+	alert("perdiste");
 	
+}
+
+
 
 }
 
