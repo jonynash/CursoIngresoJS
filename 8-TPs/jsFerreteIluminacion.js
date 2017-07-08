@@ -10,5 +10,80 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
+ 	//Creo las variables que necesito
+ 	var costo;
+ 	var cantidad;
+ 	var marca;
+ 	var descuento;
+ 	var preciofinal;
+ 	var pfdto;
  	
+	descuento1 = 0.4;
+ 	descuento= 0.5;
+ 	costo = 35;
+ 	//Tomo el ID del HTML
+ 	marca = document.getElementById('Marca').value;
+ 	//alert(marca); //pruebo si tome bien el ID
+ 	cantidad = document.getElementById('Cantidad').value;
+ 	//alert(cantidad);
+ 	
+ 	
+ 	//Realizo las Operaciones que me pide el ejercicio
+ 	preciofinal = cantidad * costo;
+ 	pfdto = preciofinal * descuento;
+ 	
+ 	//Muestro el resultado en el cuadro de texto del HTML
+ 	pfdto = document.getElementById('precioDescuento').value = pfdto;
+ 	//Creo el if con la condicion que me piden
+if (cantidad > 5)
+{
+	descuento = 0.5;
+	
 }
+if( cantidad == 5)
+	{
+		if(Marca == "ArgentinaLuz")
+		{
+			descuento = 0.6;
+		}
+		else
+		{
+			descuento = 0.7;
+		}	
+
+
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
