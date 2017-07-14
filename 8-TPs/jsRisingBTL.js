@@ -10,4 +10,82 @@ F.	Nacionalidad, “A” para argentinos, “E” para extranjeros, “N” para
 function ComenzarIngreso () 
 {
  
+	var edad;
+	var sexo;
+	var estadoCivil;
+	var sueldoBruto;
+	var legajo;
+	var nacionalidad;
+	/*var soltero;
+	var casado;
+	var divorciado;
+	var viudo;*/
+	
+
+	edad = prompt("Ingrese su Edad por favor");
+	sexo = prompt("Ingrese su sexo por favor");
+	// estadoCivil = prompt("Ingrese su estado civil: 1=soltero, 2=casado, 3=divorciado, 4=viudo");
+	sueldoBruto = prompt("Ingrese su sueldo, no debe ser menor a $8000");
+	legajo = prompt("Ingrese su numero de legajo");
+	estadoCivil=prompt("Indique Estado Civil “1” para soltero, “2” para casado, “3” para divorciado y “4” para viudo");
+
+	
+	while(!(edad>17 && edad <91))
+	{
+		alert("Re ingrese su edad");
+		edad = prompt("Ingrese su Edad por favor");
+	}
+
+	while(sexo!= "f" && sexo!="m")
+	{
+		alert("sexo invalido, reingrese su sexo");
+		sexo = prompt("Ingrese su sexo por favor");
+	}
+
+	/* while(estadoCivil!="1"&&estadoCivil!="2"&&estadoCivil!="3"&&estadoCivil!="4")
+	{
+  		alert("Estado Civil Invalido");
+  		estadoCivil=prompt("Indique Estado Civil “1” para soltero, “2” para casado, “3” para divorciado y “4” para viudo");
+  	}
+	  	switch(estadoCivil)
+	  	{
+	  		case "1":
+	  		estadoCivil="Soltero";
+		  	break;
+		  	case "2":
+		  	estadoCivil="Casado";
+		  	break;
+		  	case "3":
+		  	estadoCivil="Divorciado";
+		  	break;
+		  	case "4":
+		  	estadoCivil="Viudo";
+		  	break;
+		} 	*/
+	
+	while(sueldoBruto<7990)
+	{
+		alert("El sueldo bruto debe ser mayor a $8000");
+		sueldoBruto = prompt("Ingrese su sueldo, no debe ser menor a $8000");
+	}
+
+	while(!(legajo>999 && legajo <10000))
+	{
+		alert("Numero de legajo inexistente");
+		legajo = prompt("Ingrese su numero de legajo");
+	}
+
+
+
+
+
+	document.getElementById('Edad').value = edad;//Lo muestro en el cuadro de texto
+	document.getElementById('Sexo').value = sexo;
+	document.getElementById('EstadoCivil').value = estadoCivil;
+	document.getElementById('Sueldo').value = sueldoBruto;
+	document.getElementById('Legajo').value = legajo;
+
+
+
+	
 }
