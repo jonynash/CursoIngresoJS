@@ -28,7 +28,8 @@ function ComenzarIngreso ()
 	sueldoBruto = prompt("Ingrese su sueldo, no debe ser menor a $8000");
 	legajo = prompt("Ingrese su numero de legajo");
 	estadoCivil=prompt("Indique Estado Civil “1” para soltero, “2” para casado, “3” para divorciado y “4” para viudo");
-
+	nacionalidad=prompt("Ingrese nacionalidad");
+	
 	
 	while(!(edad>17 && edad <91))
 	{
@@ -36,13 +37,15 @@ function ComenzarIngreso ()
 		edad = prompt("Ingrese su Edad por favor");
 	}
 
+	
 	while(sexo!= "f" && sexo!="m")
 	{
 		alert("sexo invalido, reingrese su sexo");
 		sexo = prompt("Ingrese su sexo por favor");
 	}
 
-	/* while(estadoCivil!="1"&&estadoCivil!="2"&&estadoCivil!="3"&&estadoCivil!="4")
+	
+	while(estadoCivil!="1"&&estadoCivil!="2"&&estadoCivil!="3"&&estadoCivil!="4")
 	{
   		alert("Estado Civil Invalido");
   		estadoCivil=prompt("Indique Estado Civil “1” para soltero, “2” para casado, “3” para divorciado y “4” para viudo");
@@ -61,7 +64,8 @@ function ComenzarIngreso ()
 		  	case "4":
 		  	estadoCivil="Viudo";
 		  	break;
-		} 	*/
+		} 	
+	
 	
 	while(sueldoBruto<7990)
 	{
@@ -69,12 +73,35 @@ function ComenzarIngreso ()
 		sueldoBruto = prompt("Ingrese su sueldo, no debe ser menor a $8000");
 	}
 
+	
 	while(!(legajo>999 && legajo <10000))
 	{
 		alert("Numero de legajo inexistente");
 		legajo = prompt("Ingrese su numero de legajo");
 	}
 
+	
+	while(nacionalidad!="a" && nacionalidad!="e" && nacionalidad!="n");
+	{
+		alert("Dato invalido");
+		nacionalidad=prompt("Reingrese nacionalidad");
+
+		switch(nacionalidad)
+		{
+			case"a":
+			nacionalidad = "Argentina";
+			break;
+
+			case "e":
+			nacionalidad = "Extranjero";
+			break;
+
+			case"n":
+			nacionalidad = "Nacionalizado";
+			break;
+
+		}
+	}
 
 
 
@@ -84,6 +111,7 @@ function ComenzarIngreso ()
 	document.getElementById('EstadoCivil').value = estadoCivil;
 	document.getElementById('Sueldo').value = sueldoBruto;
 	document.getElementById('Legajo').value = legajo;
+	document.getElementById('Nacionalidad').value = nacionalidad;
 
 
 
